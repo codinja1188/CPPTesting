@@ -1,0 +1,30 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+Factorial[1][2] of n is defined as the product of the first n positive integers, while superfactorial[3][4] of n is the product of the first n factorials.
+
+Given an integer |a| (in its decimal representation), find the smallest non-negative integer n such that the superfactorial of n contains at least |a| trailing zeros in its decimal representation.
+
+[1]: https://en.wikipedia.org/wiki/Factorial
+[2]: https://oeis.org/A000142
+[3]: https://en.wikipedia.org/wiki/Factorial#Superfactorial
+[4]: https://oeis.org/A000178
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// a: (0 <= int(|a|) < 1125899906842624)
+// return: the answer
+int g(std::string a) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
+
