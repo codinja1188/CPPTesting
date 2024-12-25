@@ -1,0 +1,36 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+Given a grid with traversable cells as described below, calculate how many distinct paths there are from the top left to the bottom right cell with the restriction of the only allowed moves being right and down.
+
+The input is a list of rectangles, and for each rectangle i the width is a[i] and the height is b[i]. For each pair of consecutive rectangles the bottom right corner of the first overlaps with the top left corner of the second.
+
+For example, given a = [3, 5], b = [2, 4] we would have the following grid:
+
+...
+.......
+ .....
+ .....
+ .....
+
+Return the number of distinct paths modulo 256, which for the example above is 105.
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// a: Width of the rectangles
+// b: Height of the rectangles
+// return: Numbers of distinct paths modulo 256
+int g(std::vector<int> a, std::vector<int> b) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
+
