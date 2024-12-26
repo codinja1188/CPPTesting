@@ -1,0 +1,42 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+To further support denizens of Roman Empire, Google's localization effort has decided to support not only writing Roman Numerals but also reading them.
+
+The modern canonical method for converting a positive integer between 1 and 3999 to a Roman Numeral is as follows:
+* 7 symbols with corresponding values are used:
+ * I: 1
+ * V: 5
+ * X: 10
+ * L: 50
+ * C: 100
+ * D: 500
+ * M: 1000
+* The symbol values of a numeral are summed up to obtain the value (XXIII = 10 + 10 + 1 + 1 + 1 = 23)
+* Symbols are written left to right in descending value
+* Shorter representations are always preferred (110 = CX, not LLX)
+* To shorten the number of symbols further, a subtraction system can be used to make some values:
+ * I is placed before V or X to make 4 (IV) or 9 (IX)
+ * X is placed before L or C to make 40 (XL) or 90 (XC)
+ * C is placed before D or M to make 400 (CD) or 900 (CM)
+ A subtraction value couldn't be followed by a subtraction value.
+
+Write a function that will return a number represented by the Roman Numeral or 0 if it is not a canonical Roman Numeral.
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// a: A Roman Numeral
+// return: The number represented by the input or 0 if it is not a valid Roman Numeral
+int g(std::string a) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
