@@ -1,0 +1,49 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+You discovered a text that appears to be an unfinished literary piece by an engineer. The text lacks uppercase letters, rhyme, or coherent structure. However, there is one redeeming feature – in most sentences, most words start with the same letter.
+
+Your task is to enhance the value of this text by selectively removing words from each sentence so that every remaining word in a sentence starts with the same letter.
+
+Example:
+Input:
+"bananas berries blueberries cherries coconut"
+
+Output:
+"bananas berries blueberries cherries"
+
+Explanation: The words bananas, berries, blueberries, and cherries all start with b or c. The word coconut does not match and is removed.
+
+Input:
+"dragons den dennis dave. elephants eels eggs eat."
+
+Output:
+"dragons den dennis dave. elephants eels eggs eat."
+
+Explanation: All words in each sentence share the same starting letter, so no changes are necessary.
+
+
+
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+
+```cpp
+// a: A sentence with all lowercase words
+// return: Same sentence with a word or two removed for better alliteration
+std::string g(std::string a) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
+4. The solution should handle large text inputs gracefully.
+5. Focus on readability and simplicity while ensuring correct results for all edge cases.
+
+Write a code along with unit test cases for all edge cases.

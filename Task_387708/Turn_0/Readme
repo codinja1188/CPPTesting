@@ -1,0 +1,22 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+You found a piece of text that appears to be a failed literary effort from a fellow engineer. There seemed to be no rhyme nor reason nor uppercase characters in this text, and the only redeeming feature is that majority of the words in every sentence all start with the same letter. You thought you can increase its value a bit by removing a word or two from each sentence, so that every word in a sentence start with the same letter.
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// a: A sentence with all lowercase words
+// return: Same sentence with a word or two removed for better alliteration
+std::string g(std::string a) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
