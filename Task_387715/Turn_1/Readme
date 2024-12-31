@@ -1,0 +1,39 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+Due to some very unusual circumstances, a wave have hit one of the oil tankers you owned, causing the front to fall off and spilling 20000 tons of crude oil into the sea. You are trying to assess the damage to your ship.
+
+The map for the ship is represented as a list of strings of equal length:
+
+- Each character represents a compartment for storing oil.
+- Characters 0-9 indicate the amount of oil stored in 1000 ton increments. 9 means 9000 tons, 0 means empty.
+- A compartment can not fall off unless compartments above and to the left have fell off.
+
+You are optimistically thinking that the damage is minimal (because these are very strong vessels), thus the problem is finding the minimum number of compartments that add up to exactly 20.
+
+Example:
+
+ 442222222
+ 442222222
+ 422222212
+ 222222122
+
+The compartments that need to fall off are the five "4"s in front. Any other combination to add up to 20 will require more than five compartments falling off.
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// a: Oil allocation map, each digit represents 1k ton of oil
+// return: Minimum number of compartments that fell off to contribute to a 20k ton oil spill
+int g(std::vector<std::string> a) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
