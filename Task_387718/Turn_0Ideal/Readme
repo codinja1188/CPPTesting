@@ -1,0 +1,28 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+You have a black and white image (black represented by '0's and white by '1's.
+ 
+You use a 4-directional flood fill tool starting at coordinates (x,y) with origin top right and start filling with white color. You are curious how many pixels of the picture are white after your fill operation and that is what this problem should solve.
+
+The image is of size 32 x N pixels and encoded as a vector of N integers where each value is a row in the image; y=0 is the first value and y=N-1 is the last row. Each row is represented by an integer where MSB represent x=0 and LSB represent x=31.
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// a: Image of size 32xN
+// b: x coordinate where to start filling
+// c: y coordinate where to start filling
+// return: Number of pixels in the picture that are white after the fill operation
+int g(std::vector<int> a, int b, int c) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
