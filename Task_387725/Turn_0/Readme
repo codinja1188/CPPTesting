@@ -1,0 +1,62 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+Find the minimum number of steps to reach from entrance % the big key T.
+
+Dungeon tiles are as follows:
+% = entrance.
+# = wall, not traversable.
+. = floor, freely traversable.
++ = door, can only be opened by consuming a small key, after which it's treated the same as a floor tile.
+t = small key. All small keys are interchangeable.
+T = big key. This is where we are trying to reach.
+
+Example:
+##########
+#...T....#
+#........#
+###+##+###
+#t......t#
+#........#
+###+##+###
+#t......t#
+#........#
+########%#
+
+At least two doors must be opened to reach the big key. First small key can be picked up at step 2, second small key at step 9, and from there the big key can be reached at step 16.
+
+########## ########## ##########
+#...T....# #...T....# #...654..#
+#........# #........# #.....3..#
+###+##+### ###+##+### ###+##2###
+#t......t# #t....789# #t....10.#
+#........# #.....6..# #........#
+###+##+### ###+##5### ###+##.###
+#t......2# #t....43.# #t.......#
+#.......1# #........# #........#
+########%# ########%# ########%#
+
+
+Players can move horizontally or vertically, but not diagonally.
+
+Each small key can be picked up only once, going back to the same spot does not cause the key to regenerate. If you got 14 instead of 16 for test #2, this is your bug.
+
+Each door can only be opened once, crossing the same door twice only costs one small key. If you got 40 instead of 20 for test #14, this is your bug.
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// a: Dungeon maps
+// return: Minimum distance to reach big key
+int g(std::vector<std::string> a) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
