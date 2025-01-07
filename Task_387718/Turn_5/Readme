@@ -1,0 +1,51 @@
+PROBLEM DESCRIPTION START
+You are given a map represented by a grid of size 32xN. Each cell in the grid is either land (1) or water (0). The map is encoded as a vector of N integers, where each integer represents a row in the grid.
+
+The grid's height is N (number of integers), and its width is always 32 (bits per integer).
+For each integer, the Most Significant Bit (MSB) represents cell x=0, and the Least Significant Bit (LSB) represents cell x=31.
+Task
+Write a function that calculates the size of the largest contiguous landmass on the map.
+
+A landmass is defined as a group of connected land cells (1), where connectedness follows 4-directional adjacency (up, down, left, right).
+
+Return the size of the largest landmass. If no land exists, return 0.
+
+Example
+For the input vector:
+
+cpp
+Copy code
+{0b00000000001111000000000011110000, 
+ 0b00000000001111000000000011110000,
+ 0b11110000000000001111000000000000}
+This represents the following grid:
+
+Copy code
+00000000001111000000000011110000
+00000000001111000000000011110000
+11110000000000001111000000000000
+The largest contiguous landmass has a size of 8 (connected cluster of 1s).
+
+Constraints
+1 <= N <= 1000 (grid height)
+a[i] is a 32-bit integer for all 0 <= i < N
+The function must run efficiently for the largest constraints.
+PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```c++
+// a: Map of size 32xN
+// return: Size of the largest contiguous landmass.
+int f(std::vector<int> a) {
+  // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1.  Solve the problem correctly.
+2.  The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3.  Don't include any example usage or main function in the code.
+
+Provide both implementation and unit tests in your response.

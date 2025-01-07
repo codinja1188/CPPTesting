@@ -1,0 +1,26 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+You are given a map represented by a grid of size 32xN. Each cell in the grid is either land (represented by '1') or water (represented by '0'). The map is encoded as a vector of N integers, where each integer represents a row in the grid; y=0 is the first value and y=N-1 is the last row. Within each integer, the Most Significant Bit (MSB) represents x=0 and the Least Significant Bit (LSB) represents x=31.
+
+You are tasked with finding the size of the largest contiguous landmass on the map. A landmass is defined as a group of connected land cells, where connectedness is defined in 4 directions (up, down, left, right).
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```c++
+// a: Map of size 32xN
+// return: Size of the largest contiguous landmass.
+int f(std::vector<int> a) {
+  // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1.  Solve the problem correctly.
+2.  The code will be executed using `clang++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3.  Don't include any example usage or main function in the code.
+
+Provide both implementation and unit tests in your response.
