@@ -2,13 +2,13 @@
 
 std::vector<int> g(std::string a) {
   std::vector<int> current_winners;
-  for (int i = 0; i < a.size(); ++i) {
-    current_winners.push_back(i);
+  for (size_t i = 0; i < a.size(); ++i) {
+    current_winners.push_back(static_cast<int>(i));
   }
 
   while (current_winners.size() > 1) {
     std::vector<int> next_winners;
-    for (int i = 0; i < current_winners.size(); i += 2) {
+    for (size_t i = 0; i < current_winners.size(); i += 2) {
         int p1_index = current_winners[i];
         int p2_index = current_winners[i+1];
         char p1_move = a[p1_index];
