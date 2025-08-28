@@ -1,0 +1,84 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential g++ make
+        # Try to install GoogleTest if available
+        sudo apt-get install -y libgtest-dev || echo "GoogleTest not available via apt"
+    
+    - name: Validate repository structure
+      run: |
+        echo "Checking repository structure..."
+        ls -la
+        
+        echo "Counting tasks..."
+        find . -name "Makefile" -path "./Task_*" | wc -l
+        
+        echo "Checking for required files..."
+        test -f README.md || (echo "README.md missing" && exit 1)
+        test -f Makefile.template || (echo "Makefile.template missing" && exit 1)
+        test -f validate_repository.sh || (echo "validate_repository.sh missing" && exit 1)
+        
+        echo "Repository structure validation passed!"
+    
+    - name: Test build system
+      run: |
+        echo "Testing build system on representative tasks..."
+        
+        # Test a few key tasks that should build successfully
+        test_tasks=(
+          "Task_387715/Turn_SimilarPrompt"
+          "Task_387708/Turn_0"
+          "Task_387695/Turn_0"
+        )
+        
+        for task in "${test_tasks[@]}"; do
+          if [ -d "$task" ]; then
+            echo "Testing $task..."
+            cd "$task"
+            
+            # Test clean
+            make clean
+            
+            # Test build
+            make
+            
+            # Test run
+            make run
+            
+            echo "✓ $task passed"
+            cd - > /dev/null
+          else
+            echo "⚠️ $task not found"
+          fi
+        done
+    
+    - name: Run repository validation
+      run: |
+        chmod +x validate_repository.sh
+        ./validate_repository.sh
+    
+    - name: Check documentation
+      run: |
+        echo "Checking documentation..."
+        
+        # Check that README.md contains expected sections
+        grep -q "AI-Based C++ Interview Repository" README.md || (echo "Missing main title" && exit 1)
+        grep -q "Quick Start" README.md || (echo "Missing Quick Start section" && exit 1)
+        grep -q "Repository Structure" README.md || (echo "Missing Repository Structure section" && exit 1)
+        
+        echo "Documentation validation passed!"

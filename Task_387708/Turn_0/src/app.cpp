@@ -14,11 +14,11 @@ std::string g(std::string a) {
     }
 
     std::string best_sentence = "";
-    int max_words = 0;
-    for(int i = 0; i < words.size(); ++i) {
+    size_t max_words = 0;
+    for(size_t i = 0; i < words.size(); ++i) {
         for (int j = 0; j < (1 << words.size()); ++j) {
            std::vector<std::string> current_words;
-           for(int k = 0; k < words.size(); k++) {
+           for(size_t k = 0; k < words.size(); k++) {
                if((j >> k) & 1) {
                    current_words.push_back(words[k]);
                }

@@ -1,0 +1,18 @@
+# Build directories and artifacts
+build/
+*.o
+*.exe
+main
+test_runner
+
+# IDE files
+.vscode/settings.json
+.vscode/launch.json
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
