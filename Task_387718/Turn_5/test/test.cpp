@@ -20,51 +20,51 @@ void test_single_land() {
 
 
 void test_small_landmass() {
-  std::vector<int> a = {0b00000000001111000000000011110000,
-                        0b00000000001111000000000011110000,
-                        0b11110000000000001111000000000000};
+  std::vector<int> a = {static_cast<int>(0b00000000001111000000000011110000),
+                        static_cast<int>(0b00000000001111000000000011110000),
+                        static_cast<int>(0b11110000000000001111000000000000)};
   assert(f(a) == 8);
 }
 
 
 void test_scattered_land() {
-  std::vector<int> a = {0b10000000000000000000000000000001,
-                        0b00000000000000000000000000000000,
-                        0b00000000000000000000000000000001};
+  std::vector<int> a = {static_cast<int>(0b10000000000000000000000000000001),
+                        static_cast<int>(0b00000000000000000000000000000000),
+                        static_cast<int>(0b00000000000000000000000000000001)};
   assert(f(a) == 1);
 }
 
 
 void test_edge_land() {
-  std::vector<int> a = {0b11111111111111111111111111111111,
-                        0b00000000000000000000000000000000,
-                        0b00000000000000000000000000000000};
+  std::vector<int> a = {static_cast<int>(0b11111111111111111111111111111111),
+                        static_cast<int>(0b00000000000000000000000000000000),
+                        static_cast<int>(0b00000000000000000000000000000000)};
   assert(f(a) == 32);
 }
 
 
 void test_alternating_land_water() {
     std::vector<int> a = {
-        0b10101010101010101010101010101010,
-        0b01010101010101010101010101010101,
-        0b10101010101010101010101010101010
+        static_cast<int>(0b10101010101010101010101010101010),
+        static_cast<int>(0b01010101010101010101010101010101),
+        static_cast<int>(0b10101010101010101010101010101010)
     };
     assert(f(a) == 1);
 }
 
 
 void test_all_land() {
-    std::vector<int> a = {0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF};
+    std::vector<int> a = {static_cast<int>(0xFFFFFFFF), static_cast<int>(0xFFFFFFFF), static_cast<int>(0xFFFFFFFF)};
     assert(f(a) == 96);
 }
 
 void test_larger_landmass(){
-    std::vector<int> a = {0xFFFFFFFF,
-                         0xFFFFFFFF,
-                         0x0000FFFF,
-                         0xFFFFFFFF,
-                         0x0000FFFF};
-    assert(f(a) == 128 + 32);
+    std::vector<int> a = {static_cast<int>(0xFFFFFFFF),
+                         static_cast<int>(0xFFFFFFFF),
+                         static_cast<int>(0x0000FFFF),
+                         static_cast<int>(0xFFFFFFFF),
+                         static_cast<int>(0x0000FFFF)};
+    assert(f(a) == 128);
 }
 
 void test_vertical_land(){
@@ -80,7 +80,7 @@ void test_diagonal_land(){
     for(int i = 0; i < 32; ++i){
         a[i] |= (1 << i);
     }
-    assert(f(a) == 32);
+    assert(f(a) == 1);
 }
 
 

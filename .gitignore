@@ -1,0 +1,13 @@
+# Build artifacts
+build/
+*.o
+*.out
+test_runner
+main
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
