@@ -1,0 +1,36 @@
+Solve the following problem in C++:
+
+# PROBLEM DESCRIPTION START
+
+Given an array of integers, make all neighbors relatively prime by repeatedly replacing adjacent non-relatively prime elements with their LCM.
+
+Two numbers are relatively prime if their GCD (Greatest Common Divisor) is 1.
+
+The algorithm:
+1. Scan for any two neighbor numbers where the GCD is greater than 1 (indicating they are not relatively prime)
+2. If no such pair is found, the process stops as all neighbor pairs are now relatively prime
+3. If a pair that is not relatively prime is found:
+   - Remove these two numbers
+   - Replace them with their LCM (Least Common Multiple) in their place
+   - This effectively reduces the array size by one
+4. Repeat from step 1 to modify until all neighbours are relatively prime
+
+The final modified array will be the same regardless of the order in which non-relatively prime pairs are replaced.
+
+# PROBLEM DESCRIPTION END
+
+Complete the following snippet which solve the above problem:
+
+```cpp
+// arr: Input array of integers
+// return: The final array after making all neighbors relatively prime
+std::vector<int> g(std::vector<int> arr) {
+ // TODO: implementation
+}
+```
+
+The code should follow these instructions:
+
+1. Solve the problem correctly.
+2. The code will be executed using `g++ --std=c++17 --Wall`. Include any standard headers needed to execute the code.
+3. Don't include any example usage or main function in the code.
